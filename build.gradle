@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+dependencies {
+	compile fileTree( dir: "../libs", include: ['JUtils.jar', 'TerminalWindow.jar'] )
+}
+
+ext {
+	copyLibs = true
+	deployedLibDir = "Apps/run"
+	libDest = "deployed/Tools/libs"
+	jarPathPrefix = "../../libs/"
+	
+	mainClass = "app.SimpleNFOCreator"
+}
+
+apply from: '../gradle/utilapp.gradle'
