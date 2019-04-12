@@ -109,7 +109,7 @@ public class SimpleNFOCreator extends JFrame {
 			List<File> files = Arrays.asList( f.listFiles() );
 			files.sort( new WindowsExplorerFileComparator() );
 			for ( File d : files ) {
-				if ( d.isFile() && !d.getName().endsWith( ".log" ) && !d.getName().equals( "Thumbs.db" ) && d.getName().endsWith( ".mkv" ) ) {
+				if ( d.isFile() && !d.getName().endsWith( ".log" ) && !d.getName().equals( "Thumbs.db" ) && ( d.getName().endsWith( ".mkv" ) || d.getName().endsWith( ".webm" ) || d.getName().endsWith( ".avi" ) || d.getName().endsWith( ".mp4" ) ) ) {
 					File out = new File( d.getAbsolutePath().substring( 0, d.getAbsolutePath().lastIndexOf( "." ) ) + ".nfo" );
 					if ( !out.exists() ) {
 						writeFile( d, out );
