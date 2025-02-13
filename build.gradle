@@ -5,10 +5,12 @@ dependencies {
 }
 
 ext {
+	includeLibs = true
 	copyLibs = true
-	deployedLibDir = "Apps/run"
+	deployedProjDir = "deployed/Tools"
+	deployedLibDir = "./"
 	libDest = "deployed/Tools/libs"
-	jarPathPrefix = "../../libs/"
+	jarPathPrefix = "./libs/"
 	
 	mainClass = "app.SimpleNFOCreator"
 }
