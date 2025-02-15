@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 dependencies {
-	compile fileTree( dir: "../libs", include: ['JUtils.jar', 'TerminalWindow.jar'] )
+	implementation fileTree( dir: "../libs", include: ['JUtils.jar', 'TerminalWindow.jar'] )
 }
 
 ext {
